@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import { ParticleBackground } from '../../components/ui/particle-background'
 import { AnimatedText } from '../../components/ui/animated-text'
+import DhruvNew from '../../assets/Dhruvnew.png';
+
 
 export default function HeroSection() {
   // Google Drive resume link
@@ -101,7 +103,9 @@ export default function HeroSection() {
               damping: 20,
               delay: 0.4
             }}
-            className="relative aspect-square rounded-3xl overflow-hidden shadow-lg"
+            // className="relative aspect-square rounded-3xl overflow-hidden shadow-lg"
+            className="relative rounded-3xl overflow-hidden shadow-lg"
+
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent z-10"></div>
             <motion.div
@@ -110,10 +114,17 @@ export default function HeroSection() {
               transition={{ duration: 1.5, ease: "easeOut" }}
               className="w-full h-full"
             >
-              <img 
+              {/* <img 
                 src="https://res.cloudinary.com/dvfrcaw1c/image/upload/v1727844899/nfiqbipqzllz5cs1ckew.png" 
                 alt="Dhruv" 
                 className="w-full h-full object-cover"
+              /> */}
+              <img 
+                src={DhruvNew} 
+                alt="Dhruv" 
+                // className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-black"
+                style={{ objectPosition: "center" }}
               />
             </motion.div>
             
