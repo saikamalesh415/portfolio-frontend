@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self' 'unsafe-inline' 'unsafe-eval';
+        font-src https://fonts.googleapis.com https://fonts.gstatic.com 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval';
+        style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+        img-src 'self' data: blob: https:;
+        connect-src 'self' https://portfolio-backend-5gw5.onrender.com;
+      "
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sai Kamalesh - Software developer & ML Enthusiast"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/Robo.png"
+      sizes="128x128"
+    />
+    <link rel="apple-touch-icon" href="/src/assets/Robo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>SaiKamalesh's Portfolio</title>
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+    <link rel="preload" href="/src/assets/Robo.png" as="image" />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx" loading="eager"></script>
+  </body>
+</html>

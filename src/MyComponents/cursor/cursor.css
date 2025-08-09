@@ -1,0 +1,115 @@
+/* Hide default cursor */
+.custom-cursor-active {
+  cursor: none;
+}
+
+.custom-cursor-active a, 
+.custom-cursor-active button,
+.custom-cursor-active [role="button"],
+.custom-cursor-active .cursor-pointer {
+  cursor: none;
+}
+
+/* Main dot cursor */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 9999;
+  /* Use hardware acceleration for better performance */
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-dot--hover {
+  background-color: #6366f1;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot--clicked {
+  background-color: #ec4899;
+  transform: scale(0.8) translate3d(0, 0, 0);
+  transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+/* Outer ring cursor */
+.cursor-ring {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 9998;
+  /* Use hardware acceleration for better performance */
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-ring--hover {
+  width: 48px;
+  height: 48px;
+  border-color: #6366f1;
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.cursor-ring--clicked {
+  border-color: #ec4899;
+  background-color: rgba(236, 72, 153, 0.05);
+  transform: scale(1.2) translate3d(0, 0, 0);
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot, .cursor-ring {
+    display: none;
+  }
+}
+
+/* Special styling for footer (white cursor on black background) */
+.cursor-over-footer.cursor-dot {
+  background-color: #fff;
+}
+
+.cursor-over-footer.cursor-ring {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Interactive elements in footer */
+.cursor-over-footer.cursor-dot--hover {
+  background-color: #6366f1;
+}
+
+.cursor-over-footer.cursor-ring--hover {
+  border-color: #6366f1;
+}
+
+.cursor-over-footer.cursor-dot--clicked {
+  background-color: #ec4899;
+}
+
+.cursor-over-footer.cursor-ring--clicked {
+  border-color: #ec4899;
+}
+
+/* Additional cursor state classes for different contexts */
+.cursor-text .cursor-dot {
+  opacity: 0;
+}
+
+.cursor-text .cursor-ring {
+  height: 40px;
+  width: 40px;
+  border-width: 2px;
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}

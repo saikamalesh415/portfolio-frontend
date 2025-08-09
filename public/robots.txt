@@ -1,0 +1,6 @@
+# robots.txt for dhruv.dev
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dhruv.dev/sitemap.xml

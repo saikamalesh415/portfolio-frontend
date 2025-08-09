@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Prevent layout shifts */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: "GilroyRegular";
+  src: local("GilroyRegular"),
+    url("./fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@layer base {
+  :root {
+    --background-color: #ffffff;
+    --card-bg-color: #f3f4f6;
+    --text-color: #1f2937;
+    --header-text-color: #111827;
+    --accent-color: #4f46e5;
+    --button-bg-color: #e5e7eb;
+    --border-color: #d1d5db;
+    --icon-bg-color: #f9fafb;
+  }
+
+  [data-theme='dark'] {
+    --background-color: #1a1b2e;
+    --card-bg-color: #2b2d42;
+    --text-color: #e0e0e0;
+    --header-text-color: #ffffff;
+    --accent-color: #7069fc;
+    --button-bg-color: #3a3d60;
+    --border-color: #3e4057;
+    --icon-bg-color: #282a36;
+  }
+
+  /* Remove default focus ring from all inputs and form elements */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .font-logo {
+    color: #000000;
+    font-family: "GilroyRegular", Helvetica;
+  }
+
+  .menu {
+    font-family: "GilroyRegular", Helvetica;
+    font-weight: 300;
+    color: black;
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+
+  .title-card {
+    color: var(--text-color);
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+  }
+
+  .Architecture {
+    font-family: "Manrope", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 100%;
+  }
+
+  .About-Container {
+    padding: 60px 20px;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .About-Container {
+      padding: 100px 50px;
+    }
+  }
+
+  .About-Description {
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 768px) {
+    .About-Description {
+      font-size: 44px;
+      line-height: 60.1px;
+    }
+  }
+
+  /* Glassmorphism Effect */
+  .glassmorphism-card {
+    background: rgba(20, 20, 30, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .glassmorphism-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  /* Global responsive adjustments */
+  .container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 640px) {
+    .container {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+}
+
+/* Mobile-first responsive adjustments */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 1.125rem);
+}
