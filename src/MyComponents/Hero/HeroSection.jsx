@@ -8,7 +8,7 @@ import DhruvNew from '../../assets/Dhruvnew.png';
 
 export default function HeroSection() {
   // Google Drive resume link
-  const resumeUrl = "https://drive.google.com/file/d/1RZPWIkr1i9APk6GBBC7yaPrCiTJ9oqyy/view?usp=drivesdk"
+  const resumeUrl = "https://drive.google.com/file/d/1V9-vUc1YWl91uMyP2HisuYrfGo9OiUV9/view?usp=drivesdk"
   
   // Function to handle resume download
   const handleResumeDownload = () => {
