@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import nptelLogo from "../../assets/certifications/nptel.jpg";
 import codsoftLogo from "../../assets/certifications/codsoft.jpeg";
 import hackerrankLogo from "../../assets/certifications/hackerrank.png";
+import vaultofcodeLogo from "../../assets/certifications/Vault.png";
 
 // Certifications Data
 const certifications = [
@@ -30,6 +31,13 @@ const certifications = [
     image: hackerrankLogo,
     link: "https://drive.google.com/file/d/1RO7NwWkU0iA9bu28wxJil8PCCwtRa7fv/view?usp=drivesdk",
     tags: ["SQL", "HackerRank", "Database"]
+  },
+  {
+    title: "Java",
+    description: "4-week course completed in August-September 2025 via VaultOfCode",
+    image: vaultofcodeLogo,
+    link: "https://drive.google.com/file/d/1VqNf2M9GlIDOhbRXECAQjJOgIZOyfg7o/view?usp=drivesdk",
+    tags: ["VaultOfCode","Java"]
   }
 ];
 
